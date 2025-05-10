@@ -14,14 +14,17 @@ at runtime.
 
 ```cmake
 cmake ..
+make
 ```
 This will create a **bin** folder in the current directory containing
 executable named Tov_cpp.
 # Run
 
 ````shell
-./Tov_cpp [path to eos file]
+cd bin
+./Tov_cpp [path to eos file] [number of points]
 ````
 # Important points to note
 1. Make sure that eos file is a csv file
 2. Eos file should contain at least two columns of pressure and energy density
+3. Path to eos file should be relative to executable.

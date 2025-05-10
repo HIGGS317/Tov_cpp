@@ -9,8 +9,9 @@
 int main(int argc, char *argv[]) {
 
   try {
-    int a, b,num;
+    int a, b;
     char love;
+    int num = std::stoi(argv[2],nullptr,10);
 
     std::ifstream file(argv[1]);
     std::string output_file;
@@ -28,9 +29,6 @@ int main(int argc, char *argv[]) {
 
     std::cout<<"Do you want to calculate love number (Y/N) \n";
     std::cin>>love;
-
-    std::cout << "Enter the number MR points \n";
-    std::cin >> num;
 
     std::cout << "Enter the name of output file\n";
     std::cin >> output_file;
@@ -91,7 +89,7 @@ if (love == 'Y') {
       ToV(central_energy, pressure, density, minimum_pressure);
 
     // Print first 10 results
-    for (size_t i = 0; i < 50; ++i) {
+    for (size_t i = 0; i < num; ++i) {
       std::cout << "Mass=" << MR[i].mass << " radius=" << MR[i].radius << '\n';
     }
 
