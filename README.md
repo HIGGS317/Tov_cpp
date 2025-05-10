@@ -13,7 +13,7 @@ at runtime.
 # Build 
 
 ```cmake
-cmake ..
+cmake .
 make
 ```
 This will create a **bin** folder in the current directory containing
